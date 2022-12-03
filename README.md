@@ -15,3 +15,9 @@ npm run ios: Permite correr el proyecto en un emulador de iOS. Para usar esto se
 npm run eject: Permite tener acceso a los scripts de bulid, para hacer configuraciones custom.
 
 npm test: Ejecuta los tests usando Jest.
+
+# Entrar al proyecto
+
+- Abrir la línea de comando.
+- Escribir cd rate-app.
+- Escribir npm start.
