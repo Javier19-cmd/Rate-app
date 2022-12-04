@@ -21,6 +21,8 @@ npm test: Ejecuta los tests usando Jest.
 - Abrir la línea de comando.
 - Escribir cd rate-app.
 - Escribir npm start.
+- Abrir Android Studio y correr el emulador de Android.
+- Presionar a en la línea de comando para abrir el proyecto en el emulador.
 
 # Otras Instalaciones
 
@@ -48,3 +50,7 @@ Nota: Es importante correr la consola como administrador.
 Nota: Se debe abrir Android Studio para correr el emulador y luego correr el app en la consola.
 
 C:\Users\sebas\AndroidStudioProjects\MyApplication
+
+# Código QR
+
+El código QR se puede usar para ver el proyecto en otros celulares. Se tiene que instalar la aplicación de Expo Go en el celular y escanear el código QR.
