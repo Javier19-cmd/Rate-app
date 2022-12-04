@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
         fontFamily: theme.fonts.main,
         fontWeight: theme.fontWeights.normal,
     },
-    colorPrimary:{
+    colorPrimary: {
         color: theme.colors.primary,
     },
-    colorSecundary:{
+    colorSecundary: {
         color: theme.colors.textSecondary,
     },
     bold: {
@@ -20,18 +20,25 @@ const styles = StyleSheet.create({
     }, 
     subheading: {
         fontSize: theme.fontSizes.subheading,
-    }, 
+    },
+    textAlignCenter: {
+        textAlign: 'center',
+    }
 })
 
-export default function StyledText({children, color, fontWeight, fontSize, style, ...restOfProps}) {
+export default function StyledText({align, children, color, fontWeight, fontSize, style, ...restOfProps}) {
+    
     const textStyles = [
         styles.text,
+        align === 'center' && styles.textAlignCenter,
         color === 'primary' && styles.colorPrimary,
-        color === 'secundary' && styles.colorSecundary,
+        color === 'secondary' && styles.colorSecundary,
         fontWeight === 'bold' && styles.bold,
         fontSize === 'subheading' && styles.subheading,
-        fontWeight === 'bold' && fontSize === 'subheading' && styles.bold,
+        fontWeight === 'bold' && styles.bold,
+        style
     ]
+
     return (
         <Text style={textStyles} {...restOfProps}>
             {children}

@@ -1,8 +1,14 @@
 const theme = {
+    appBar: {
+        primary: '#24292e',
+        primaryText: '#fff',
+    },
     colors: {
         textPrimary: '#24292e',
         textSecondary: '#586069',
         primary: '#0366d6',
+        secondary: '#24292e',
+        white: '#fff',
     },
     fontSizes: {
         body: 14,
@@ -14,7 +20,7 @@ const theme = {
     fontWeights: {
         normal: '400',
         bold: '700',
-    },
+    }
 }
 
 export default theme

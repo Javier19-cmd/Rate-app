@@ -1,59 +1,67 @@
 import React from 'react'
-import {View, StyleSheet} from 'react-native'
+import {View, StyleSheet, Image} from 'react-native'
 import StyledText from './StyledText.jsx'
+import RepositoryStats from './RepositoryStats.jsx'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
+import theme from '../theme.js'
 
-const RepositoryStats = (props) => {
-    // En React Native la dirección es al revés, es decir, flexDirection: 'column' es vertical y flexDirection: 'row' es horizontal.
-    return (
-        <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            
-            <View>
-                <StyledText fontWeight='bold'>Stars</StyledText>
-                <StyledText>{props.forksCount}</StyledText>
-            </View>
 
-            <View>
-                <StyledText fontWeight='bold'>Forks</StyledText>
-                <StyledText>{props.stargazersCount}</StyledText>
-            </View>
+const RepositoryItemHeader = (props) => (
+    <View style = {{flexDirection: 'row', paddingBottom: 2}}>
 
-            <View>
-                <StyledText fontWeight='bold'>Reviews</StyledText>
-                <StyledText>{props.reviewCount}</StyledText>
-            </View>
-
-            <View>
-                <StyledText fontWeight='bold'>Rating</StyledText>
-                <StyledText>{props.ratingAverage}</StyledText>
-            </View>
-
+        {/*Esta view se queda donde está y usa sus espacio*/}
+        <View style={{paddingRight: 10}}> 
+            <Image style={styles.image} source={{ uri:props.ownerAvatarUrl }} />
         </View>
-    )
-}
+        
+        {/* Esta view ocupa todo els espacio que puede */}
+        <View style={{flex: 1}}>
+            <StyledText fontWeight='bold'>{props.id}</StyledText>
+            <StyledText color='secondary'>FullName: {props.fullName}</StyledText>
+            <StyledText>Description: {props.description}</StyledText>
+            <StyledText style={styles.language}>{props.language}</StyledText>
+        </View>
+    
+    </View>
+)
 
 const RepositoryItem = (props) => {
     return (
         <View key={props.id} style={styles.container}>
-            <StyledText fontSize='subheading' fontWeight='bold'>{props.id}</StyledText>
-            <StyledText>FullName: {props.fullName}</StyledText>
-            <StyledText>Description: {props.description}</StyledText>
-            <StyledText>Language: {props.language}</StyledText>
+            <RepositoryItemHeader {...props}/>
             <RepositoryStats {...props}/>
         </View>
     )
 }
 
 const styles = StyleSheet.create({ //Estilos. Esto es la forma adecuada de escribir los estilos en React Native.
+    // Propiedades del contenedor.
     container: {
         padding: 20,
-        paddingBottom: 5,
-        paddingTop: 5,
-    }, // Estilo del contenedor.
+        paddingVertical: 5,
+    }, 
     strong: {
         color: '#09f',
         fontWeight: 'bold',
         marginBottom: 5,
-    } // Estilo del texto.
+    }, 
+    // Propiedades del texto de lenguaje.
+    language: {
+        padding: 4,
+        color: theme.colors.white,
+        backgroundColor: theme.colors.primary,
+        alignSelf: 'flex-start',
+        borderRadius: 4,
+        marginVertical: 4,
+        overflow: 'hidden',
+    },
+    
+    // Propiedades de la imagen.
+    image: {
+        width: 50,
+        height: 50,
+        borderRadius: 4,
+    }
 }) // Estilos de la vista.
 
 export default RepositoryItem
