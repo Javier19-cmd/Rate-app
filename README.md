@@ -33,3 +33,18 @@ Por el momento, es importante tener intalada la versión 16 de NodeJS para que e
 # Referencia para el tutorial que se está siguiendo
 
 https://www.youtube.com/watch?v=qi87b6VcIHY&t=342s&ab_channel=midudev
+
+
+# Referencia para instalar el SDK de Android
+
+https://www.youtube.com/watch?v=6tEV6H07Fd8&ab_channel=ComputerBerry
+
+Para crear el emulador, se tiene que empezar a ver desde el minuto 14:00.
+
+Nota: Es importante correr la consola como administrador.
+
+# Aplicación que se está usando en Android Studio para emular el Android a usar: 
+
+Nota: Se debe abrir Android Studio para correr el emulador y luego correr el app en la consola.
+
+C:\Users\sebas\AndroidStudioProjects\MyApplication

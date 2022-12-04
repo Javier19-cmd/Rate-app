@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View, TouchableWithoutFeedback, Alert, TouchableNativeFeedback } from 'react-native'
 
 export default function App() {
+  console.log("Hola mundo")
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* El view funciona como flexbox */}
+      {/* Para que algo sea tocable, se tiene que importar un touchable de algo */}
+
+      <TouchableNativeFeedback onPress={() => Alert.alert("Hemos tocado un texto!")}>
+        <Text>Hola Mundo</Text>
+      </TouchableNativeFeedback>
     </View>
   );
 }
@@ -17,4 +23,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
