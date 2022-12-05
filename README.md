@@ -28,6 +28,8 @@ npm test: Ejecuta los tests usando Jest.
 
 Para correr el proyecto en la interfaz web, se tiene que correr el siguiente comando: npx expo install react-native-web@~0.18.9 react-dom@18.1.0 @expo/webpack-config@^0.17.2 (este comando puede cambiar por las versiones)
 
+Para instalar el router, se tiene que correr la siguiente línea de comando: npm install react-router-native --location=global.
+
 # Nota importante
 
 Por el momento, es importante tener intalada la versión 16 de NodeJS para que el proyecto corra sin problemas.

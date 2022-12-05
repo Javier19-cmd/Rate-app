@@ -1,13 +1,18 @@
 import React from 'react'
-import {View} from 'react-native'
+import {View, Text} from 'react-native'
 import RepositoryList from './RepositoryList'
 import AppBar from './AppBar'
+import {Route, Routes} from 'react-router-native'
 
 const Main = () => {
     return (
         <View style={{flex: 1}}>
             <AppBar />
-            <RepositoryList />
+            <Routes>
+                <Route path="/" element={<RepositoryList />} />
+                <Route path="/signin" element={<Text>Trabajando en ello</Text>} />
+            </Routes>
+            
         </View>
     )
 }
