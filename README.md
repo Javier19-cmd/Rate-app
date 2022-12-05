@@ -30,6 +30,10 @@ Para correr el proyecto en la interfaz web, se tiene que correr el siguiente com
 
 Para instalar el router, se tiene que correr la siguiente línea de comando: npm install react-router-native --location=global.
 
+Para instalar formik, se tiene que correr la siguiente línea de comando: npm install formik.
+
+Para instalar yup, se tiene que correr la siguiente línea de comando: npm install yup.
+
 # Nota importante
 
 Por el momento, es importante tener intalada la versión 16 de NodeJS para que el proyecto corra sin problemas.
