@@ -34,6 +34,10 @@ Para instalar formik, se tiene que correr la siguiente línea de comando: npm in
 
 Para instalar yup, se tiene que correr la siguiente línea de comando: npm install yup.
 
+Para instalar apollo, se hizo lo siguiente: npm i @apollo/client.
+
+Para instalar graphql, se hizo lo siguiente: npm i graphql.
+
 # Nota importante
 
 Por el momento, es importante tener intalada la versión 16 de NodeJS para que el proyecto corra sin problemas.
