@@ -12,24 +12,10 @@ query{
     }
 }
 `
-
-const Country = ({item}) => {
-    return (
-        <View>
-            <Text>{item.name}</Text>
-            <Text>{item.code}</Text>
-            <Text>{item.capital}</Text>
-            <Text>{item.currency}</Text>
-        </View>
-    )
-}
-
-
 const Respuesta = () => {
+
+
     const {data} = useQuery(QUERY)
-
-    console.log(data.countries)
-
     return (
         <View>
             <Text>{JSON.stringify(data.countries, null, 2)}</Text>

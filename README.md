@@ -51,6 +51,10 @@ https://www.youtube.com/watch?v=qi87b6VcIHY&t=342s&ab_channel=midudev
 
 https://www.youtube.com/watch?v=6tEV6H07Fd8&ab_channel=ComputerBerry
 
+# Referencia para hacer consultas básicas de grahql
+
+https://www.youtube.com/watch?v=OlH0o1qr8w0&t=503s&ab_channel=WilCODE
+
 Para crear el emulador, se tiene que empezar a ver desde el minuto 14:00.
 
 Nota: Es importante correr la consola como administrador.
